@@ -18,7 +18,7 @@ Your desktop and download folders keeps clean!!
 crontab -e
 0 0 * * * python3 path/to/ArchiveFiles/main.py
 ```
-**note**:Don't save ArchiveFiles on Desktop an Downloads.It's move to Archive folder. It'll not to work.
+**note**:Don't save ArchiveFiles on Desktop or Downloads. It'll moved to Archive folder. It'll not to work.
 
 # Settings
 
