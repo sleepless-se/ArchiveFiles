@@ -26,7 +26,7 @@ def move_to(current_path,oldFolder,days=7):
         None
     else:
         os.mkdir(archive_folder)
-    dead_line = datetime.date.today() - datetime.timedelta(days=10)
+    dead_line = datetime.date.today() - datetime.timedelta(days=days)
     logging.debug(dead_line)
 
 
@@ -54,6 +54,7 @@ def move_to(current_path,oldFolder,days=7):
             logging.warning("Can't open " + file_name)
 
         logging.debug("- - -")
+
 
 if __name__ == '__main__':
 
