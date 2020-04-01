@@ -10,6 +10,7 @@ HOME_PATH = os.environ['HOME']
 DESKTOP_PATH = os.path.join(HOME_PATH, "Desktop")
 DOWNLOADS_PATH = os.path.join(HOME_PATH, "Downloads")
 ARCHIVE_FOLDER_NAME = "Archive"
+REMOVE_LIST = ['']
 
 # #logging
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -35,10 +36,15 @@ def move_to(current_path, oldFolder, days=7):
         target = os.path.join(current_path, file_name)
         logging.debug(target)
 
+        if target in REMOVE_LIST:
+            logging.debug('remove list name')
+            continue
+
         if os.path.exists(target):
             dt = datetime.datetime.fromtimestamp(os.stat(target).st_mtime)
         key = dt.strftime('%Y/%m/%d  %H:%M:%S')
         logging.debug(str(key) + " - " + str(dt))
+
 
         if (dt.date() < dead_line):
             try:
