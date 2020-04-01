@@ -10,7 +10,7 @@ Your desktop and download folders keeps clean!!
 
 ## 1.Download
 
-`git clone git@github.com:sleepless-se/ArchiveFiles.git`
+`git clone https://github.com/sleepless-se/ArchiveFiles.git`
 
 
 ## 2.Cron setting
